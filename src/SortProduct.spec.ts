@@ -1,8 +1,12 @@
-
 import { test } from '../Fixtures/product-fixtures';
 import { SortProductPage } from '../Pages/SortProductPage';
 import * as dotenv from 'dotenv';
 dotenv.config();
+
+test.afterEach(async ({page}) => {
+  await page.context().clearCookies();
+  await page.evaluate(() => localStorage.clear());
+})
 
 test('User should be able to sort the product to A-Z', async ({page}) => {
     const sortProductPage = new SortProductPage(page)

@@ -8,19 +8,17 @@ export class LoginPage {
     readonly usernameInput;
     readonly passwordInput;
     readonly loginButton;
-    readonly page: Page;
-    readonly acctnav: Locator;
     readonly titleheader;
+    readonly page: Page;
     
-
+    
     constructor(page: Page) {
         this.page = page;
         this.signin = this.page.locator('[data-test="nav-sign-in"]');
         this.usernameInput = this.page.getByPlaceholder('email');
         this.passwordInput = this.page.getByPlaceholder('password');
         this.loginButton = this.page.locator('[data-test="login-submit"]');
-        this.acctnav = this.page.locator('[data-test="nav-home"]');
-        this.titleheader = this.page.getByText('My account');
+        this.titleheader = this.page.getByText('My accountHere you can manage');
     }
 
 // Methods
@@ -34,7 +32,7 @@ export class LoginPage {
         await this.usernameInput.fill(username); 
         await this.passwordInput.fill(password);
         await this.loginButton.click();
-        await expect(this.titleheader).toContainText('My account');
+        await expect(this.titleheader).toBeVisible();
     }
 
 }

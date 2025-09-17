@@ -29,7 +29,7 @@ export class SortProductPage {
     }
 
      async sortproductnameDESC(){
-      await this.navigationHome.click();
+      await this.navigationHome.click();  
       await expect(this.sortdropdown).toBeVisible();
       await this.sortdropdown.selectOption('Name (Z - A)');
       await expect(this.cardTitle).toContainText('Wood Saw');
