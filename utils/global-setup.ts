@@ -1,7 +1,7 @@
 import { chromium, FullConfig } from "@playwright/test";
 import * as fs from 'fs';
 import users from '../Fixtures/users.json';
-import {LoginPage} from '../Pages/LoginPage';
+import { LoginPage } from '../Pages/LoginPage';
 import * as dotenv from 'dotenv';
 
 dotenv.config();

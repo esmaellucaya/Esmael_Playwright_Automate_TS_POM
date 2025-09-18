@@ -11,7 +11,7 @@ export class SortProductPage {
     constructor(page: Page) {
         this.page = page;
         this.navigationHome =  page.locator('[data-test="nav-home"]');
-        this.sortdropdown = page.locator('select');
+        this.sortdropdown = page.locator('select' );
         this.cardTitle =  page.locator('.card-title').first();
     }
 

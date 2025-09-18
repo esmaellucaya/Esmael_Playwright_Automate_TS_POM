@@ -12,12 +12,14 @@ test('User should be able to sort the product to A-Z', async ({page}) => {
     const sortProductPage = new SortProductPage(page)
     await sortProductPage.goto();
     await sortProductPage.sortproductnameASC();
+    console.log('Succesfully Sorted to: A-Z');
   });
 
 test('User should be able to sort the product to Z-A', async ({page}) => {
     const sortProductPage = new SortProductPage(page)
     await sortProductPage.goto();
     await sortProductPage.sortproductnameDESC();
+    console.log('Succesfully Sorted to: Z-A');
   });
 
 

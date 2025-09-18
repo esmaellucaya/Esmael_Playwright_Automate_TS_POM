@@ -6,6 +6,7 @@ export class AddtoCartPage {
   readonly page;
   readonly navigationHome: Locator;
   readonly pliersImage: Locator;
+  readonly pliersImage2: Locator;
   readonly productnameDisplay: Locator;
   readonly addtocartItem: Locator;
   readonly alertMessage: Locator;
@@ -21,7 +22,8 @@ export class AddtoCartPage {
   readonly proceedBtn3: Locator
   readonly paymentSelection: Locator;
   readonly confirmBtn: Locator;
-  readonly PaymentMessage
+  readonly PaymentMessage: Locator;
+
 
 
 
@@ -30,6 +32,7 @@ export class AddtoCartPage {
     this.page = page;
     this.navigationHome = page.locator('[data-test="nav-home"]');
     this.pliersImage = page.locator('img[src*="pliers02.avif"]');
+    this.pliersImage2 = page.locator('img[src*="pliers03.avif"]');
     this.productnameDisplay = page.locator('[data-test="product-name"]');
     this.addtocartItem = page.locator('[data-test="add-to-cart"]');
     this.alertMessage = page.getByRole('alert', { name: 'Product added to shopping'});
@@ -52,22 +55,45 @@ export class AddtoCartPage {
     console.log('Navigating to:,', process.env.PRODUCT_URL);
     await this.page.goto(`${process.env.PRODUCT_URL}`);
   }
+  
+//For loop for multiple selection of items
 
-  async validateselectedItem() {
-    await this.navigationHome.click();
-    await this.pliersImage.click();
-    await expect(this.productnameDisplay).toBeVisible();
-  }
+  async validateMultipleSelectedItems(productsIds: string[]) {
+    const productSelectors: Record<string, string> = {
+       'pliers01': 'img[src*="pliers02.avif"]',
+       'pliers02': 'img[src*="pliers03.avif"]',
+       // Add new item here
+    };
 
-  async clickaddtocartItem(){
-      await this.addtocartItem.click(); 
-  }
+    for (const id of productsIds) {
+      const productImageSelectors = productSelectors[id];
+        if (!productImageSelectors) {
+          console.warn(`Product ID "${id}" not found in selector map.`);
+          continue;
 
-  async alertmessage(){
-    await this.alertMessage.click();
-  }
+        }
 
-  async proceedbutton(){
+        await this.navigationHome.click();
+        await this.page.locator(productImageSelectors).click();
+        await expect(this.productnameDisplay).toBeVisible();
+        await this.addtocartItem.click();
+        await expect(this.alertMessage).toBeVisible();
+
+    }
+
+  } 
+    
+// for single selection item
+//   async validateselectedItem1() {
+//     await this.navigationHome.click();
+//     await this.pliersImage.click();
+//     await expect(this.productnameDisplay).toBeVisible();
+//     await this.addtocartItem.click(); 
+//     await this.alertMessage.isVisible();
+//   }
+
+
+  async confirmbutton(){
     await this.addtocartScreen.click()
     await this.proceedBtn1.click()
     await expect(this.useralertMessage).toContainText('Hello Jane Doe, you are already logged in. You can proceed to checkout.');

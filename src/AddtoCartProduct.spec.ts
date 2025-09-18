@@ -7,10 +7,9 @@ dotenv.config();
 test('Validate end-to-end cart flow through successful checkout', async ({page}) => {
     const addtoCartPage = new AddtoCartPage(page)
     await addtoCartPage.goto();
-    await addtoCartPage.validateselectedItem();
-    await addtoCartPage.clickaddtocartItem();
-    await addtoCartPage.alertmessage();
-    await addtoCartPage.proceedbutton();
+    await addtoCartPage.validateMultipleSelectedItems(['pliers01','pliers02']);
+   //await addtoCartPage.validateselectedItem1();
+    await addtoCartPage.confirmbutton();
     await addtoCartPage.proceedToCheckout();
     await addtoCartPage.fillOutInfo(
         dataFillOut.state,
