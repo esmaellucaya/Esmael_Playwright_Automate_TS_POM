@@ -26,9 +26,6 @@ export class AddtoCartPage {
   readonly PaymentMessage: Locator;
 
 
-
-
-
   constructor(page: Page) {
     this.page = page;
     this.navigationHome = page.locator('[data-test="nav-home"]');
@@ -58,7 +55,6 @@ export class AddtoCartPage {
   }
   
 //For loop for multiple selection of items
-
   async validateMultipleSelectedItems(productsIds: string[]) {
     for (const id of productsIds) {
       const selectors = itemSelections[id]

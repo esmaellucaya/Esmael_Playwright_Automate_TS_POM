@@ -2,35 +2,35 @@
   "cookies": [
     {
       "name": "_ga",
-      "value": "GA1.1.326074568.1758220589",
+      "value": "GA1.1.2042162922.1758224138",
       "domain": ".practicesoftwaretesting.com",
       "path": "/",
-      "expires": 1792780590.896607,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_ga_0BJFXRKTYC",
-      "value": "GS2.1.s1758220589$o1$g1$t1758220590$j59$l0$h0",
-      "domain": ".practicesoftwaretesting.com",
-      "path": "/",
-      "expires": 1792780590.921188,
+      "expires": 1792784139.527103,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "cf_clearance",
-      "value": "Px3sXRwRTfwHvtZbWJw8xRN48FmN.LdaP2MTE9RX5Ek-1758220590-1.2.1.1-BxMBlWH4y0Odrrn1bgVHPvRmX9ApO8.IHvCoTE3oSg3AbkdRB6WXqlf0Qso9EDVYVPtIukQuBS505WjXVmppjo6pcrYySOutHkxbDE5bDRrkY1QiQLKe8V4f6RHfuB4EwLw6eXxmLz7Jq_21zkzJTPOhZA7zeu0_88l_hiqsWad8e_6q_FRJU_C1sfu87OY.vK5XQ6rgvCYmQOuIw7mm7TZgTEloCmYwfDIRDuRigNc",
+      "value": "EHjXmJv4xjn8xOl1rR0BwYAX.fwG1V99EBOGB0q9M.8-1758224139-1.2.1.1-mp0G8QKoxq1sjWF_faxRki4qmIxWliv4jSGcUv1kls_nqJTIUFTmL1vfF5qfHDxdde0d4C3gWfBbc5XUQBrA2V34oOifnoBvzA.4zA4OewqmEdnCoeKaCtYa4d525OoC_SDrYQuP0lmG_w2WbExU6BiX7qQWoAYrcN.mzfg3dUKVt_s9kjAfYIK0oIuqZQvcM2LPX52_rlwTaPFLr5n27CpbuvDtR9X00va.ZqmiePI",
       "domain": ".practicesoftwaretesting.com",
       "path": "/",
-      "expires": 1789756590.93341,
+      "expires": 1789760139.499715,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None",
       "partitionKey": "https://practicesoftwaretesting.com",
       "_crHasCrossSiteAncestor": false
+    },
+    {
+      "name": "_ga_0BJFXRKTYC",
+      "value": "GS2.1.s1758224137$o1$g1$t1758224139$j58$l0$h0",
+      "domain": ".practicesoftwaretesting.com",
+      "path": "/",
+      "expires": 1792784139.54874,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
     }
   ],
   "origins": [
@@ -39,7 +39,7 @@
       "localStorage": [
         {
           "name": "auth-token",
-          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5wcmFjdGljZXNvZnR3YXJldGVzdGluZy5jb20vdXNlcnMvbG9naW4iLCJpYXQiOjE3NTgyMjA1OTAsImV4cCI6MTc1ODIyMDg5MCwibmJmIjoxNzU4MjIwNTkwLCJqdGkiOiJ5ejBVTjFBVDJ0ZGJFR3VFIiwic3ViIjoiMDFLNUVaUVJTU0pEVjJTQUNHNDQ1RlRBWlciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6InVzZXIifQ.02WE60pHfiTZDOE3dfHeh5zFOhFOcs-58aUvvLV0a-E"
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5wcmFjdGljZXNvZnR3YXJldGVzdGluZy5jb20vdXNlcnMvbG9naW4iLCJpYXQiOjE3NTgyMjQxMzksImV4cCI6MTc1ODIyNDQzOSwibmJmIjoxNzU4MjI0MTM5LCJqdGkiOiJ4dkpEZ3JCTDBrR0pwYjVoIiwic3ViIjoiMDFLNUYzNUhBWjhUQzlRM1BLN0RLR1A4S0YiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6InVzZXIifQ.XlmoaYrQy3PqKcQkhJRc_MPCtThbPxepVdg5nUy7PoU"
         }
       ]
     }

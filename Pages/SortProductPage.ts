@@ -21,19 +21,19 @@ export class SortProductPage {
         await this.page.goto(`${process.env.PRODUCT_URL}`);
     }
 
-    async sortproductnameASC(){
+    async sortBy(option: string, expectedSortItem: string) {
       await this.navigationHome.click();
       await expect(this.sortdropdown).toBeVisible();
-      await this.sortdropdown.selectOption('Name (A - Z)');
-      await expect(this.cardTitle).toContainText('Adjustable Wrench');
+      await this.sortdropdown.selectOption(option);
+      await expect(this.cardTitle).toContainText(expectedSortItem);
     }
 
-     async sortproductnameDESC(){
-      await this.navigationHome.click();  
-      await expect(this.sortdropdown).toBeVisible();
-      await this.sortdropdown.selectOption('Name (Z - A)');
-      await expect(this.cardTitle).toContainText('Wood Saw');
-    }
+    // async sortproductnameASC(){
+    //   await this.navigationHome.click();
+    //   await expect(this.sortdropdown).toBeVisible();
+    //   await this.sortdropdown.selectOption('Name (A - Z)');
+    //   await expect(this.cardTitle).toContainText('Adjustable Wrench');
+    // }
 
 }
 
