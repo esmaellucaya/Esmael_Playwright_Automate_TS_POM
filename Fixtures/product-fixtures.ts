@@ -17,6 +17,7 @@ export const test = base.extend<Fixtures>({
     },
 
     addtoCartPage: async ({page}, use) => {
+        await page.goto(process.env.PRODUCT_URL!);
         const addtoCartPage = new AddtoCartPage(page);
         await use(addtoCartPage);
     },

@@ -10,7 +10,21 @@ export class AddtoCartPage {
   readonly addtocartItem: Locator;
   readonly alertMessage: Locator;
   readonly addtocartScreen: Locator;
-  readonly proceedButton: Locator;
+  readonly proceedBtn1: Locator;
+  readonly useralertMessage: Locator;  
+  readonly proceedBtn2: Locator;
+  readonly displayViewSt: Locator;
+  readonly fillcityName: Locator;
+  readonly fillState: Locator;
+  readonly displayCountry: Locator;
+  readonly fillpostalCode: Locator;
+  readonly proceedBtn3: Locator
+  readonly paymentSelection: Locator;
+  readonly confirmBtn: Locator;
+  readonly PaymentMessage
+
+
+
 
   constructor(page: Page) {
     this.page = page;
@@ -20,8 +34,18 @@ export class AddtoCartPage {
     this.addtocartItem = page.locator('[data-test="add-to-cart"]');
     this.alertMessage = page.getByRole('alert', { name: 'Product added to shopping'});
     this.addtocartScreen = page.locator('[data-test="nav-cart"]');
-    this.proceedButton = page.locator('[data-test="proceed-1"]');
-
+    this.proceedBtn1 = page.locator('[data-test="proceed-1"]');
+    this.useralertMessage = page.locator('app-login');
+    this.proceedBtn2 = page.locator('[data-test="proceed-2"]');
+    this.displayViewSt = page.locator('[data-test="street"]');
+    this.fillcityName = page.locator('[data-test="city"]');
+    this.fillState = page.locator('[data-test="state"]');
+    this.displayCountry = page.locator('[data-test="country"]');
+    this.fillpostalCode = page.locator('[data-test="postal_code"]');
+    this.proceedBtn3 = page.locator('[data-test="proceed-3"]');
+    this.paymentSelection = page.locator('[data-test="payment-method"]')
+    this.confirmBtn = page.locator('[data-test="finish"]');
+    this.PaymentMessage = page.locator('[data-test="payment-success-message"]');
   }
 
   async goto() {
@@ -39,8 +63,33 @@ export class AddtoCartPage {
       await this.addtocartItem.click(); 
   }
 
-  async clickalertmessage(){
+  async alertmessage(){
     await this.alertMessage.click();
   }
 
+  async proceedbutton(){
+    await this.addtocartScreen.click()
+    await this.proceedBtn1.click()
+    await expect(this.useralertMessage).toContainText('Hello Jane Doe, you are already logged in. You can proceed to checkout.');
+  }
+
+  async proceedToCheckout() {
+    await this.proceedBtn2.click(); 
+  }
+
+  async fillOutInfo(state: string, postal_code: string) {
+    await expect(this.displayViewSt).toHaveValue('Test street 98');
+    await expect(this.fillcityName).toHaveValue('Vienna');
+    await this.fillState.fill(state);
+    await expect(this.displayCountry).toBeVisible();
+    await this.fillpostalCode.fill(postal_code);
+    await this.proceedBtn3.click();
+  }
+
+  async paymentOption() {
+    await this.paymentSelection.selectOption('cash-on-delivery');
+    await this.confirmBtn.click();
+    await expect(this.PaymentMessage).toBeVisible();
+    
+  }
 }
