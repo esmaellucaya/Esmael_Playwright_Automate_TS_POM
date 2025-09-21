@@ -1,36 +1,16 @@
 {
   "cookies": [
     {
-      "name": "_ga",
-      "value": "GA1.1.2042162922.1758224138",
-      "domain": ".practicesoftwaretesting.com",
-      "path": "/",
-      "expires": 1792784139.527103,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
       "name": "cf_clearance",
-      "value": "EHjXmJv4xjn8xOl1rR0BwYAX.fwG1V99EBOGB0q9M.8-1758224139-1.2.1.1-mp0G8QKoxq1sjWF_faxRki4qmIxWliv4jSGcUv1kls_nqJTIUFTmL1vfF5qfHDxdde0d4C3gWfBbc5XUQBrA2V34oOifnoBvzA.4zA4OewqmEdnCoeKaCtYa4d525OoC_SDrYQuP0lmG_w2WbExU6BiX7qQWoAYrcN.mzfg3dUKVt_s9kjAfYIK0oIuqZQvcM2LPX52_rlwTaPFLr5n27CpbuvDtR9X00va.ZqmiePI",
+      "value": "VnC3QmqcmG7xdjz92xh3QHN1DX8Gs_2OI2ruzJtrMPw-1758470955-1.2.1.1-.jCaaA3Z69_Lhk595yfFpMSs9_5YQQmaWUa4AKcasMna0n79L6LkrlZiuxvD.P983GVZ47UCxdBiR.FT5Tw6k.AgXg9SpV7ghGOJX_iI__qvmxB5HBfRTbKSk0hHNNT.usBxxOORORWC2UwEcaID9UqMNkbtH325cJFoOdOVRpqd8.Pk3EzTL2wf2JR31iERbc9bkWGEk8btwSKeXorm8N0KUW.5v7fvNWHJQ_KAfDQ",
       "domain": ".practicesoftwaretesting.com",
       "path": "/",
-      "expires": 1789760139.499715,
+      "expires": 1790006954.975832,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None",
       "partitionKey": "https://practicesoftwaretesting.com",
       "_crHasCrossSiteAncestor": false
-    },
-    {
-      "name": "_ga_0BJFXRKTYC",
-      "value": "GS2.1.s1758224137$o1$g1$t1758224139$j58$l0$h0",
-      "domain": ".practicesoftwaretesting.com",
-      "path": "/",
-      "expires": 1792784139.54874,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
     }
   ],
   "origins": [
@@ -39,7 +19,7 @@
       "localStorage": [
         {
           "name": "auth-token",
-          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5wcmFjdGljZXNvZnR3YXJldGVzdGluZy5jb20vdXNlcnMvbG9naW4iLCJpYXQiOjE3NTgyMjQxMzksImV4cCI6MTc1ODIyNDQzOSwibmJmIjoxNzU4MjI0MTM5LCJqdGkiOiJ4dkpEZ3JCTDBrR0pwYjVoIiwic3ViIjoiMDFLNUYzNUhBWjhUQzlRM1BLN0RLR1A4S0YiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6InVzZXIifQ.XlmoaYrQy3PqKcQkhJRc_MPCtThbPxepVdg5nUy7PoU"
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5wcmFjdGljZXNvZnR3YXJldGVzdGluZy5jb20vdXNlcnMvbG9naW4iLCJpYXQiOjE3NTg0NzA5NTUsImV4cCI6MTc1ODQ3MTI1NSwibmJmIjoxNzU4NDcwOTU1LCJqdGkiOiI0WUtMYXFoVXBLTk9CRTBWIiwic3ViIjoiMDFLNVBHMjU1MDg1MEtIUkJLQkFaMUg3V1EiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6InVzZXIifQ.wCa4JmC_XgulbmzzkVdMZlvdzBXux5F82YunX60OSNg"
         }
       ]
     }
