@@ -22,9 +22,8 @@ constructor(page: Page) {
    this.contactMessage = page.locator('[data-test="message"]');
    this.contactAttachment = page.getByLabel('Attachment');
    this.contactSubmitBtn = page.locator('[data-test="contact-submit"]');
-   this.contactAlertMessage = page.getByText('Thanks for your message! We');  
+   this.contactAlertMessage = page.getByText('Thanks for your message! We will contact you shortly.');  
   }
-
   async goto() {
     console.log('Navigating to:', process.env.CONTACT_URL);
     await this.page.goto(`${process.env.CONTACT_URL}`);
@@ -40,10 +39,9 @@ constructor(page: Page) {
    const filePath = path.join(__dirname, '..', 'files', 'Test_attachment_file.txt');
    await this.contactAttachment.setInputFiles(filePath);
   }
-
   async submitButton(){
     await this.contactSubmitBtn.click();
-    await expect(this.contactAlertMessage).toHaveText('Thanks for your message! We will contact you shortly.');
+    await expect(this.contactAlertMessage).toBeVisible();
   }
 
 }
