@@ -15,14 +15,14 @@ test('Validate User should be able to sort the product ascending', async ({page}
     const sortProductPage = new SortProductPage(page)
     await sortProductPage.goto();
     await sortProductPage.sortBy(SortOptions.NAME_ASC, expectedSortItem.NAME_ASC);
-    console.log(`Successfully Sorted items`);
+    console.log(`Successfully sorted items ascending`);
   });
 
 test('Validate User should be able to sort the product descending', async({page}) => {
    const sortProductPage = new SortProductPage(page)
    await sortProductPage.goto();
    await sortProductPage.sortBy(SortOptions.NAME_DESC, expectedSortItem.NAME_DESC);
-   console.log(`Successfully Sorted items`);
+   console.log(`Successfully sorted items descending`);
 });
 
 // Old script  
