@@ -1,5 +1,5 @@
 import { Page, expect, Locator } from '@playwright/test'
-import  path from 'path';
+import path from 'path';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
